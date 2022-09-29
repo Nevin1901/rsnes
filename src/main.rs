@@ -1,6 +1,8 @@
 pub struct CPU {
+    pub stack_counter: u8,
     pub register_a: u8,
-    pub register_a: u8,
+    pub register_x: u8,
+    pub register_y: u8,
     pub status: u8,
     pub program_counter: u16,
 }
@@ -8,7 +10,10 @@ pub struct CPU {
 impl CPU {
     pub fn new() -> Self {
         CPU {
+            stack_counter: 0,
             register_a: 0,
+            register_x: 0,
+            register_y: 0,
             status: 0,
             program_counter: 0
         }
